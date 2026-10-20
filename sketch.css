@@ -1,6 +1,30 @@
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+#clear {
+    margin-left: 16px;
+    border-radius: 10px;
+    height: 32px;
+}
 .grid-square {
-    width: 30px;
-    height: 30px;
+    width: 38px;
+    height: 38px;
     background-color: white;
     border: 1px solid black;
+    
+}
+
+#content {
+    display: flex;
+    width: 640px;
+    flex-wrap: wrap;
+   margin: 0 auto;
+}
+
+#container {
+    display: flex;
+    align-items: center;
 }

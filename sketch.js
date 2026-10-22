@@ -4,7 +4,10 @@ const color = document.querySelector("#pen-color")
 
 
 clearBtn.addEventListener("click", () => {
-gridSqr.style.backgroundColor = "white"
+    const squares = document.querySelectorAll(".grid-square")
+    for ( const square of squares) {
+        square.style.backgroundColor = "white"
+    }
 })
 
 color.addEventListener("input", () => {
@@ -19,12 +22,19 @@ grid.appendChild(gridSqr)
 gridSqr.addEventListener("mousedown", (event) => {
    if (event.buttons & 1) {
     gridSqr.style.backgroundColor = color.value}
+    else if (event.buttons & 2) {
+        gridSqr.style.backgroundColor = "white"
+    }
     
 })
+   
 gridSqr.addEventListener("mouseenter", (event) =>{
    if (event.buttons & 1) {
    gridSqr.style.backgroundColor = color.value
 }
+})
+grid.addEventListener("contextmenu", (event) =>{
+    event.preventDefault() 
 })
 }}
 
